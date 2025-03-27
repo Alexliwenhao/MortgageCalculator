@@ -1,0 +1,86 @@
+<view class="calculator">
+  <!-- 贷款类型选择 - 只显示组合贷款 -->
+  <view class="loan-types">
+    <view class="type-item active">组合贷款</view>
+  </view>
+
+  <!-- 计算方式选择 - 只显示按房屋总价 -->
+  <view class="calc-types">
+    <view class="calc-type active">按房屋总价</view>
+  </view>
+
+  <view class="input-section">
+    <view class="input-item">
+      <text>房屋总价</text>
+      <input type="digit" value="{{totalPrice}}" bindinput="onTotalPriceInput" placeholder="请输入房屋总价"/>
+      <text>万</text>
+    </view>
+
+    <view class="input-item">
+      <text>贷款比例</text>
+      <input type="digit" value="{{loanRatio}}" bindinput="onLoanRatioInput" placeholder="1-10"/>
+      <text>成</text>
+    </view>
+
+    <view class="input-item">
+      <text>贷款总额</text>
+      <input type="number" value="{{totalLoan}}" bindinput="onTotalLoanInput" placeholder="请输入贷款总额"/>
+      <text>万</text>
+    </view>
+    
+    <view class="input-item">
+      <text>个税比例(%)</text>
+      <input type="digit" data-field="personalTaxRate" bindinput="onRateInput" placeholder="请输入个税比例"/>
+    </view>
+    
+    <view class="input-item">
+      <text>契税比例(%)</text>
+      <input type="digit" data-field="deedTaxRate" bindinput="onRateInput" placeholder="请输入契税比例"/>
+    </view>
+    
+    <view class="input-item">
+      <text>佣金比例(%)</text>
+      <input type="digit" data-field="commissionRate" bindinput="onRateInput" placeholder="请输入佣金比例"/>
+    </view>
+    
+    <view class="input-item">
+      <text>其他费用(元)</text>
+      <input type="digit" bindinput="onOtherFeesInput" placeholder="请输入其他费用"/>
+    </view>
+
+    <!-- 公积金贷款设置 -->
+    <view class="input-item">
+      <text>公积金金额(万元)</text>
+      <input type="number" value="{{gjjAmount}}" bindinput="onGJJAmountInput" placeholder="请输入整数金额"/>
+    </view>
+    
+    <view class="input-item">
+      <text>公积金年限(年)</text>
+      <input type="number" value="{{gjjYears}}" bindinput="onYearsInput" data-type="gjj" placeholder="1-30年"/>
+    </view>
+    
+    <view class="input-item">
+      <text>公积金利率(%)</text>
+      <input type="digit" value="{{gjjRate}}" bindinput="onRateChange" data-type="gjj" placeholder="请输入利率"/>
+    </view>
+
+    <!-- 商业贷款设置 -->
+    <view class="input-item">
+      <text>商贷金额(万元)</text>
+      <input type="number" value="{{sydAmount}}" bindinput="onSYDAmountInput" placeholder="请输入整数金额"/>
+    </view>
+    
+    <view class="input-item">
+      <text>商贷年限(年)</text>
+      <input type="number" value="{{sydYears}}" bindinput="onYearsInput" data-type="syd" placeholder="1-30年"/>
+    </view>
+
+    <view class="input-item">
+      <text>商贷利率(%)</text>
+      <input type="digit" value="{{sydRate}}" bindinput="onRateChange" data-type="syd" placeholder="请输入利率"/>
+    </view>
+
+    <!-- 添加开始计算按钮 -->
+    <view class="calculate-btn" bindtap="startCalculate">开始计算</view>
+  </view>
+</view> 

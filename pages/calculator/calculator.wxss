@@ -1,0 +1,141 @@
+.calculator {
+  padding: 20rpx;
+}
+
+.input-section {
+  background: #fff;
+  padding: 20rpx;
+  border-radius: 12rpx;
+}
+
+.input-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx 0;
+  border-bottom: 1rpx solid #eee;
+}
+
+.input-item input {
+  flex: 1;
+  width: auto;
+  text-align: right;
+  margin: 0 20rpx;
+  min-width: 120rpx;
+}
+
+.input-item text:last-child {
+  margin-left: 10rpx;
+  color: #666;
+  min-width: 40rpx;
+}
+
+.input-item text:first-child {
+  color: #333;
+  min-width: 160rpx;
+}
+
+.result-section {
+  margin-top: 30rpx;
+}
+
+.result-card {
+  background: #fff;
+  padding: 20rpx;
+  border-radius: 12rpx;
+}
+
+.result-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+}
+
+.result-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10rpx 0;
+}
+
+.result-total {
+  margin-top: 20rpx;
+  padding-top: 20rpx;
+  border-top: 1rpx solid #eee;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+}
+
+.loan-types {
+  display: flex;
+  justify-content: center;
+  padding: 20rpx;
+  background: #fff;
+  margin-bottom: 20rpx;
+}
+
+.type-item {
+  padding: 10rpx 30rpx;
+  font-size: 28rpx;
+  color: #1989fa;
+  border-bottom: 4rpx solid #1989fa;
+}
+
+.calc-types {
+  display: flex;
+  justify-content: center;
+  padding: 20rpx;
+  background: #fff;
+  margin-bottom: 20rpx;
+}
+
+.calc-type {
+  padding: 10rpx;
+  font-size: 28rpx;
+  color: #1989fa;
+  position: relative;
+}
+
+.calc-type::after {
+  content: '';
+  position: absolute;
+  bottom: -10rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40rpx;
+  height: 4rpx;
+  background: #1989fa;
+}
+
+/* 添加新的样式 */
+.picker {
+  color: #333;
+}
+
+.lpr-info,
+.lpr-current,
+.history,
+.rate-input {
+  display: none;
+}
+
+.rate-input input {
+  width: 100rpx;
+  text-align: center;
+  margin: 0 10rpx;
+}
+
+.calculate-btn {
+  margin: 40rpx 0;
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: center;
+  background: #1989fa;
+  color: #fff;
+  border-radius: 44rpx;
+  font-size: 32rpx;
+}
+
+.calculate-btn:active {
+  opacity: 0.8;
+} 

@@ -1,0 +1,76 @@
+<view class="result-page">
+  <!-- 返回按钮移到顶部 -->
+  <view class="back-btn" bindtap="goBack">返回修改</view>
+
+  <view class="result-card">
+    <view class="result-title">首付款明细</view>
+    <view class="result-list">
+      <view class="result-item">
+        <text>基础首付：</text>
+        <text>{{downPaymentBase}}万元</text>
+      </view>
+      <view class="result-item">
+        <text>个人所得税：</text>
+        <text>{{personalTax}}万元</text>
+      </view>
+      <view class="result-item">
+        <text>契税：</text>
+        <text>{{deedTax}}万元</text>
+      </view>
+      <view class="result-item">
+        <text>中介佣金：</text>
+        <text>{{commission}}万元</text>
+      </view>
+      <view class="result-item">
+        <text>其他费用：</text>
+        <text>{{otherFees}}元</text>
+      </view>
+    </view>
+    <view class="divider"></view>
+    <view class="result-total">
+      <text>首付款总额：</text>
+      <text>{{totalDownPayment}}万元</text>
+    </view>
+    <view class="result-monthly">
+      <text>月供：</text>
+      <text>{{monthlyPayment}}元</text>
+    </view>
+  </view>
+
+  <!-- 添加等额本息还款明细 -->
+  <view class="loan-info-card">
+    <view class="loan-info-header">
+      <view class="loan-info-item">
+        <text>贷款总额</text>
+        <text>{{totalLoan}}万</text>
+      </view>
+      <view class="loan-info-item">
+        <text>利息总额</text>
+        <text>{{totalInterest}}万</text>
+      </view>
+      <view class="loan-info-item">
+        <text>贷款年限</text>
+        <text>{{loanYears}}年</text>
+      </view>
+    </view>
+    <view class="loan-desc">每月还款金额不变，其中还款的本金逐月递增，利息逐月递减，计算结果仅供参考。</view>
+  </view>
+
+  <!-- 添加还款计划表 -->
+  <view class="repayment-table">
+    <view class="table-header">
+      <text class="col-period">期数</text>
+      <text class="col-amount">总还款金额</text>
+      <text class="col-amount">商贷还款</text>
+      <text class="col-amount">公积金还款</text>
+    </view>
+    <scroll-view scroll-y class="table-body">
+      <view class="table-row" wx:for="{{repaymentPlan}}" wx:key="period">
+        <text class="col-period">{{item.period}}</text>
+        <text class="col-amount">{{item.totalAmount}}</text>
+        <text class="col-amount">{{item.sydAmount}}</text>
+        <text class="col-amount">{{item.gjjAmount}}</text>
+      </view>
+    </scroll-view>
+  </view>
+</view> 
